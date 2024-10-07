@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finleycrowther.au.physicssim.Controllers.MainController">
+    <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0">
+        <MediaView fx:id="landingVideoContainer" fitHeight="400.0" fitWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <AnchorPane fx:id="nav_back" prefHeight="200.0" prefWidth="200.0"
+                    style="-fx-background-color: rgba(0, 0, 0, 0.20);" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox fx:id="nav_list" layoutX="32.0" layoutY="80.0" prefHeight="200.0" prefWidth="100.0" spacing="12.0"
+                  AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="133.0">
+                <Text fx:id="new_simulation" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="NEW SIMULATION"/>
+                <Text fx:id="load_simulation" fill="WHITE" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="LOAD SIMULATION"/>
+                <Text fx:id="documentation" fill="WHITE" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="DOCUMENTATION"/>
+                <Text fx:id="statistics" fill="WHITE" layoutX="10.0" layoutY="57.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="STATISTICS"/>
+                <Text fx:id="settings" fill="WHITE" layoutX="10.0" layoutY="74.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="SETTINGS"/>
+            </VBox>
+        </AnchorPane>
+    </AnchorPane>
+
+</Pane>

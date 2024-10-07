@@ -1,0 +1,11 @@
+Currently supported simulations are:
+* [Projectile Motion](ProjectileMotion.md)
+* [Simple Harmonic Motion](SimpleHarmonicMotion.md)
+* [Circular Motion](CircularMotion.md)
+* [Gravitational Field](GravitationalField.md)
+* [Electric Field](ElectricField.md)
+* [Magnetic Field](MagneticField.md)
+* [Wave Interference](WaveInterference.md)
+* [Wave Diffraction](WaveDiffraction.md)
+* [Wave Refraction](WaveRefraction.md)
+* [Wave Reflection](WaveReflection.md)
