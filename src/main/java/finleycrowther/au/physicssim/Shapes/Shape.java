@@ -1,6 +1,5 @@
-package finleycrowther.au.physicssim.Simulation;
+package finleycrowther.au.physicssim.Shapes;
 
-import finleycrowther.au.physicssim.Util.Utilities;
 import finleycrowther.au.physicssim.Util.Utilities.Vector;
 
 import java.util.ArrayList;
@@ -20,6 +19,7 @@ public abstract class Shape {
     Vector<Double, Double, Double> Position;
     Vector<Double, Double, Double> Velocity;
     Vector<Double, Double, Double> Acceleration;
+    Axis<X, Y, Z, X> axis;
 
     public Shape(Double surfaces, boolean is3D, boolean isSmooth, boolean isPolygon, boolean isHollow, Double Mass, Double Volume, Double Density, Material material, Vector<Double, Double, Double> Position, Vector<Double, Double, Double> Velocity, Vector<Double, Double, Double> Acceleration) {
         this.surfaces = surfaces;
@@ -35,6 +35,14 @@ public abstract class Shape {
         this.Velocity = Velocity;
         this.Acceleration = Acceleration;
 
+    }
+
+    public Axis<X, Y, Z, X> getAxis() {
+        return axis;
+    }
+
+    public Axis<X, Y, Z, X> setAxis() {
+        return axis;
     }
 
     public double SurfaceArea() {
@@ -77,6 +85,10 @@ public abstract class Shape {
         public double SurfaceArea() {
             return 6 * Math.pow(side, 2);
         }
+        public double vortexAirResistanceConstant() {
+            return 0; // There are no hole in the cube therefor vortexes are not formed internally
+        }
+
     }
 
     class Cylinder extends Shape {
@@ -166,7 +178,7 @@ public abstract class Shape {
 
     // Advanced 3D Shapes
     public static class IrregularPolyhedron extends Shape {
-        List<Vector<Double, Double, Double>> Vectors;
+        public List<Vector<Double, Double, Double>> Vectors;
 
         public IrregularPolyhedron(List<Vector<Double, Double, Double>> Vectors, Double surfaces, boolean is3D, boolean isSmooth, boolean isPolygon, boolean isHollow, Double Mass, Double Volume, Double Density, Material material, Vector<Double, Double, Double> Position, Vector<Double, Double, Double> Velocity, Vector<Double, Double, Double> Acceleration) {
             super(surfaces, is3D, isSmooth, isPolygon, isHollow, Mass, Volume, Density, material, Position, Velocity, Acceleration);

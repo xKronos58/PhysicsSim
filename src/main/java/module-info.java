@@ -1,8 +1,9 @@
 module finleycrowther.au.physicssim {
-    requires javafx.controls;
-    requires javafx.fxml;
     requires java.desktop;
     requires javafx.media;
+    requires one.jpro.platform.mdfx;
+    requires javafx.fxml;
+    requires javafx.web;
 
 
     opens finleycrowther.au.physicssim to javafx.fxml;

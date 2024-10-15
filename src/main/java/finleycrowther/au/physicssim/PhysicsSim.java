@@ -1,5 +1,6 @@
 package finleycrowther.au.physicssim;
 
+import finleycrowther.au.physicssim.Physics.update;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,12 +15,16 @@ import java.util.Objects;
 
 public class PhysicsSim extends Application {
     public static Scene mainScene;
+    public static update tick;
 
     @Override
     public void start(Stage stage) throws Exception {
         mainScene = new Scene(FXMLLoader.load(Objects.requireNonNull(PhysicsSim.class.getResource("Main.fxml"))));
         stage.setScene(mainScene);
         stage.setTitle("Physics Simulation");
+
+        tick = new update();
+        tick.start();
 
         // Forced aspect ratio
         // Bind the width and height properties to maintain a 16:9 aspect ratio

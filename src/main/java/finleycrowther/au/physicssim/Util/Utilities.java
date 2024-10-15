@@ -1,7 +1,5 @@
 package finleycrowther.au.physicssim.Util;
 
-import finleycrowther.au.physicssim.Simulation.Object;
-
 import java.util.*;
 
 public class Utilities {

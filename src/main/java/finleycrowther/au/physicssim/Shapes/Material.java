@@ -1,4 +1,4 @@
-package finleycrowther.au.physicssim.Simulation;
+package finleycrowther.au.physicssim.Shapes;
 
 public enum Material {
     WOOD(0.5),
