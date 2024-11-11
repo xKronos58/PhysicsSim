@@ -25,7 +25,6 @@ public class PhysicsSim extends Application {
 
         tick = new update();
         tick.start();
-
         // Forced aspect ratio
         // Bind the width and height properties to maintain a 16:9 aspect ratio
         stage.minWidthProperty().bind(mainScene.heightProperty().multiply(16.0 / 9.0));

@@ -51,9 +51,7 @@ public class MainController {
         Media media = new Media(new File(landingPageVideo).toURI().toString());
         MediaPlayer mediaPlayer = new MediaPlayer(media);
 
-        mediaPlayer.setOnError(() -> {
-            System.err.println("Error occurred: " + mediaPlayer.getError().getMessage());
-        });
+        mediaPlayer.setOnError(() -> System.err.println("Error occurred: " + mediaPlayer.getError().getMessage()));
 
         mediaPlayer.setAutoPlay(true);
         mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
@@ -102,7 +100,7 @@ public class MainController {
                 new clickItem(load_simulation, "load_simulation_main.fxml"),
                 new clickItem(documentation, "documentation.fxml"),
                 new clickItem(statistics, "statistics.fxml"),
-                new clickItem(settings, "settings.fxml"));
+                new clickItem(settings, "settings_Root.fxml"));
     }
 
     /**

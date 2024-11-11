@@ -72,6 +72,12 @@ public class Utilities {
             this.point = point;
         }
 
+        public Vector(X x, Y y, Z z) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
         /**
          * Adds two vectors together
          * @param vectors the vectors to add

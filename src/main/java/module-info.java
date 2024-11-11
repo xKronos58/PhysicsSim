@@ -6,8 +6,10 @@ module finleycrowther.au.physicssim {
     requires javafx.web;
 
 
-    opens finleycrowther.au.physicssim to javafx.fxml;
     exports finleycrowther.au.physicssim;
+    opens finleycrowther.au.physicssim to javafx.fxml;
     exports finleycrowther.au.physicssim.Controllers;
     opens finleycrowther.au.physicssim.Controllers to javafx.fxml;
+    exports finleycrowther.au.physicssim.FluidSimulation;
+    opens finleycrowther.au.physicssim.FluidSimulation to javafx.fxml;
 }
